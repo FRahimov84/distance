@@ -3,8 +3,9 @@ package main
 func main() {
 
 }
-func findDistance(outgo,fuel int)(distance float64)  {
+
+func findDistance(outgo,fuel int64)(distance int64)  {
 	const outgoDistance  = 100
-	distance = float64(fuel * outgoDistance / outgo)
+	distance = fuel * outgoDistance / outgo
 	return
 }
