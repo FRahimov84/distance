@@ -6,11 +6,10 @@ func Test_findDistance(t *testing.T) {
 
 	tests := []struct {
 		name  string
-		outgo int
-		fuel  int
-		want  float64
+		outgo int64
+		fuel  int64
+		want  int64
 	}{
-		// TODO: Add test cases.
 		{"Fuel reserve more than outgo", 10,20,200},
 		{"Fuel reserve equal to outgo", 8,8,100},
 		{"Fuel reserve less than outgo", 12,6,50},
