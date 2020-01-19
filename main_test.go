@@ -6,8 +6,8 @@ func Test_findDistance(t *testing.T) {
 
 	tests := []struct {
 		name  string
-		outgo int64
-		fuel  int64
+		consumption int64
+		leftFuel  int64
 		want  int64
 	}{
 		{"Fuel reserve more than outgo", 10,20,200},
@@ -16,7 +16,7 @@ func Test_findDistance(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := findDistance(tt.outgo, tt.fuel); got != tt.want {
+			if got := findDistance(tt.consumption, tt.leftFuel); got != tt.want {
 				t.Error("findDistance test", tt.name,"want:",tt.want,"got:",got)
 			}
 		})
